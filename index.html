@@ -186,14 +186,22 @@
   </div>
 
   <!-- AnyDone Chat Script (for testing use only) -->
-  <script src='https://edge-a.anydone.com/chat-blue.js'></script> 
-  <script>
+ <script src='https://edge-a.anydone.com/chat-blue.js'></script>
+<script>
+    function initializeChatBot() {
     const apiKeyId = "182CB0FEEAD14848A32FDCD3B3DF2070";
     const apiSecret = "C6HDq9_kWX7Qq7yYbwEQq4yklyZy66AH55Y4WWFfhlmRFo5";
-    const mode = 'popup_mode';
+    const mode = 'sidedrawer_mode'
     const placeholder = {};
-    init_anydone_chat(apiKeyId, apiSecret, placeholder, mode);
-  </script>
+    const initialized = true;
+    init_anydone_chat(apiKeyId, apiSecret, placeholder, mode, initialized);
+    }
+</script>
+
+
+<button onclick="initializeChatBot()">Initialize Chat Bot</button>
+
+
 
 </body>
 </html>
